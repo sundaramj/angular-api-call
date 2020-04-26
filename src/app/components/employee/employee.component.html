@@ -1,0 +1,35 @@
+<h1>Employee admin</h1>
+
+
+<div *ngIf="employeeList">
+    <table border="1px solid #000">
+        <tr>
+            <th>EmpId</th>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Age</th>
+            <!-- <th>Action</th> -->
+        </tr>
+        <tr *ngFor="let data of employeeList">
+            <td>{{data.emp_id}}</td>
+            <td>{{data.name}}</td>
+            <td>{{data.dept}}</td>
+            <td>{{data.age}}</td>
+            <!--<td>
+                <a routerLink="/employee/{{data._id}}" (click)="editEmp(data)"><span>Edit</span></a> ||
+                <a routerLink="/employee/{{data._id}}" (click)="deleteEmp(data)"><span>Delete</span></a>
+            </td>-->
+        </tr>
+    </table>
+</div>
+<!--
+<div *ngIf="employee">    
+        <label>Name</label>
+        <input type="text" [(ngModel)]="employee.name" id="name"/>
+
+        <label>Department</label>
+        <input type="text" [(ngModel)]="employee.dept" name="dept"/>
+
+        <button (click)="updateEmp(employee)" class="btn btn-success">Submit</button>    
+</div>
+-->
